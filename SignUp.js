@@ -15,7 +15,7 @@ form.addEventListener('submit', function(event) {
 
     // Clear any previous error messages
     errorMessage.textContent = '';
-
+    // hello
     // Perform the validation
     if (password !== confirmPassword) {
         // Display a user-friendly error message on the page
