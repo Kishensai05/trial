@@ -1,0 +1,225 @@
+/* General Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main Container - The large rounded rectangle holding everything */
+.main-container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 600px; /* <--- Fixed height is back */
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Form Section - The left side with the gradient background */
+.form-section {
+    flex: 1;
+    min-width: 400px;
+    background: linear-gradient(180deg, #F0F2F5 0%, #DDE0E3 100%);
+    padding: 20px; /* Further reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.form-section header {
+    text-align: left;
+    margin-bottom: 5px; /* Greatly reduced margin */
+}
+
+.form-section header h1 {
+    font-size: 1.5em; /* Smaller font size */
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.form-section header h2 {
+    font-size: 1.2em; /* Smaller font size */
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.form-section header p {
+    font-size: 0.75em; /* Smaller font size */
+    color: #666;
+    margin-top: 0;
+}
+
+/* Form Styling */
+#signupForm {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5px; /* Reduced padding */
+    padding-bottom: 5px; /* Reduced padding */
+}
+
+#signupForm label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 3px; /* Reduced margin */
+    text-align: left;
+    font-size: 0.85em; /* Smaller font size */
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+    width: 100%;
+    padding: 8px 10px; /* Reduced padding */
+    margin-bottom: 8px; /* Reduced margin */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.9em; /* Smaller font size */
+    background-color: #fcfcfc;
+}
+
+#signupForm input::placeholder {
+    color: #aaa;
+}
+
+/* Checkbox and Terms */
+.form-section label input[type="checkbox"] {
+    margin-right: 5px;
+}
+.form-section label input[type="checkbox"] + a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.8em; /* Smaller font size */
+}
+.form-section label input[type="checkbox"] + a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    border: none;
+    border-radius: 8px;
+    background-color: #FFD700;
+    color: #333;
+    font-size: 0.9em; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Reduced margin */
+}
+
+.submit-button:hover {
+    background-color: #E6C200;
+}
+
+/* Social Login Placeholder */
+.social-login-placeholder {
+    margin-top: 15px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    font-size: 0.75em; /* Smaller font size */
+    color: #888;
+}
+
+/* Footer Links */
+.form-section footer {
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+    font-size: 0.75em; /* Smaller font size */
+    color: #888;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px; /* Reduced padding */
+    border-top: 1px solid #eee;
+}
+
+.form-section footer a {
+    color: #666;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.form-section footer a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d9534f;
+    text-align: center;
+    font-size: 0.75em; /* Smaller font size */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 1em;
+}
+
+/* Visual Section - The right side */
+/* Visual Section - The right side with the image */
+.visual-section {
+    flex: 1.5;
+    /* Update the url() with the path to your image */
+    background-image: url('mcraft.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    z-index: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 800px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        max-width: 500px;
+    }
+
+    .visual-section {
+        height: 200px;
+        border-radius: 0 0 25px 25px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 25px;
+    }
+
+    .form-section {
+        padding: 30px;
+        min-width: unset;
+    }
+
+    .form-section footer {
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+    }
+    .form-section footer a {
+        margin: 5px 0;
+    }
+}

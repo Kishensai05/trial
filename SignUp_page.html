@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-section">
+            <header>
+                <h1>ShotsByKishen</h1>
+                <h2>Create an account</h2>
+                <p>Sign up and get 30-day free trial</p>
+            </header>
+
+            <form id="signupForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Create a password" required><br>
+
+                <label for="confirmPassword">Confirm Password:</label><br>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required><br>
+
+                <br>
+                <label>
+                    <input type="checkbox" id="terms" required>
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+                <br>
+
+                <p id="errorMessage" class="error-message"></p>
+                <button type="submit" class="submit-button">Create Account</button>
+                <br>
+                
+                <div class="social-login-placeholder">
+                    (Social login options can go here if needed)
+                </div>
+            </form>
+
+            <footer>
+                <p>Already have an account? <a href="/login.html">Sign In</a></p>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </footer>
+        </div>
+
+        <div class="visual-section">
+            
+            </div>
+    </div>
+    
+    <script src="SignUp.js"></script>
+</body>
+</html>
